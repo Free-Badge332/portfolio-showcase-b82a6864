@@ -28,3 +28,10 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Portfolio import
+- Keep the imported portfolio under `src/portfolio` and load it lazily after hydration from the index route because its animation and Three.js modules depend on browser APIs.
+- Preserve the target project's pinned TanStack dependencies and runtime bootstrap when importing source code to retain compatibility with Lovable hosting.
+- Keep the source portfolio stylesheet separate from the shared Tailwind theme and omit Tailwind preflight to preserve the imported site's original layout.
+- Keep service content in normal document flow and independent of character-loading or reveal animations so descriptions and skills remain readable on every device.
+- The 3D room (RoomHome) is the full-screen home page at /; the full character portfolio lives at /portfolio and is reached from the room menu.
